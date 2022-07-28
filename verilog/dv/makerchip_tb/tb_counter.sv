@@ -26,7 +26,7 @@
    logic [2:0] irq;
    logic cnt;
             
-   counter_option1 dut (
+   user_project_wrapper dut (
    `ifdef USE_POWER_PINS
       .vccd1(vccd1),	// User area 1 1.8V power
       .vssd1(vssd1),	// User area 1 digital ground

@@ -1,7 +1,7 @@
 \m4_TLV_version 1d: tl-x.org
 \SV
    // Including Caravel Definitions
-   m4_sv_include_url(['https://raw.githubusercontent.com/efabless/caravel/main/verilog/rtl/defines.v'])
+   m4_sv_include_url('https://raw.githubusercontent.com/efabless/caravel/main/verilog/rtl/defines.v')
    // Including the top level wrapper
    m4_sv_include_url(['https://raw.githubusercontent.com/ALI11-2000/Open-MPW-Framework-TLV/main/verilog/rtl/user_project_wrapper.v'])
    // Including the top level makerchip testbench
