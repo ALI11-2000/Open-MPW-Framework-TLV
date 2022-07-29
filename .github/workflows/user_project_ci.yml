@@ -203,6 +203,7 @@ jobs:
           make install_mcw
           make openlane
           make simenv
+          make sandpiper
 
       - name: Harden using Openlane
         run: |
