@@ -82,14 +82,18 @@ rtl_path=$(shell cd verilog/rtl && pwd)
 tlv_path=$(shell cd verilog/tlv && pwd)
 .PHONY: $(blocks)
 $(blocks): % :
-	@if [ -f $(tlv_path)/$@.tlv ]; then\
-		if [ -f $(rtl_path)/$@.sv ]; then\
-			if [ $(tlv_path)/$@.tlv -nt  $(rtl_path)/$@.sv ]; then\
-				sandpiper-saas -o $@.sv -i $(tlv_path)/$@.tlv --outdir $(rtl_path) --sv_url_inc;\
+	@if [ -v ${CI} ]; then\
+		if [ -f $(tlv_path)/$@.tlv ]; then\
+				if [ -f $(rtl_path)/$@.sv ]; then\
+					if [ $(tlv_path)/$@.tlv -nt  $(rtl_path)/$@.sv ]; then\
+						sandpiper-saas -o $@.sv -i $(tlv_path)/$@.tlv --outdir $(rtl_path) --sv_url_inc;\
+					fi;\
+				else \
+					sandpiper-saas -o $@.sv -i $(tlv_path)/$@.tlv --outdir $(rtl_path) --sv_url_inc;\
+				fi;\
 			fi;\
-		else \
-			sandpiper-saas -o $@.sv -i $(tlv_path)/$@.tlv --outdir $(rtl_path) --sv_url_inc;\
-		fi;\
+	else \
+		echo "Skipping Sandpiper Execution in CI";\
 	fi
 	$(MAKE) -C openlane $*
 
