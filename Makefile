@@ -95,7 +95,7 @@ $(blocks): % :
 	else \
 		echo "Skipping Sandpiper Execution in CI";\
 	fi
-	$(MAKE) -C openlane $*
+	# $(MAKE) -C openlane $*
 
 dv_patterns=$(shell cd verilog/dv && find * -maxdepth 0 -type d)
 dv-targets-rtl=$(dv_patterns:%=verify-%-rtl)
