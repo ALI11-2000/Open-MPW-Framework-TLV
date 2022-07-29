@@ -147,13 +147,13 @@ jobs:
           make counter_option1
           make user_project_wrapper
 
-      - name: Run DV RTL tests
-        run: |
-          make verify-io_ports-rtl 
-          make verify-la_test1-rtl 
-          make verify-la_test2-rtl 
-          make verify-mprj_stimulus-rtl 
-          make verify-wb_port-rtl
+#       - name: Run DV RTL tests
+#         run: |
+#           make verify-io_ports-rtl 
+#           make verify-la_test1-rtl 
+#           make verify-la_test2-rtl 
+#           make verify-mprj_stimulus-rtl 
+#           make verify-wb_port-rtl
 
       - name: Run DV GL tests
         run: |
@@ -210,13 +210,13 @@ jobs:
           make counter_option1
           make user_project_wrapper
 
-      - name: Run DV RTL tests
-        run: |
-          make verify-io_ports-rtl 
-          make verify-la_test1-rtl 
-          make verify-la_test2-rtl 
-          make verify-mprj_stimulus-rtl 
-          make verify-wb_port-rtl
+#       - name: Run DV RTL tests
+#         run: |
+#           make verify-io_ports-rtl 
+#           make verify-la_test1-rtl 
+#           make verify-la_test2-rtl 
+#           make verify-mprj_stimulus-rtl 
+#           make verify-wb_port-rtl
 
       - name: Run DV GL tests
         run: |
