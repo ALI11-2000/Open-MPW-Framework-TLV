@@ -47,7 +47,7 @@
    m4_sv_include_url(['https://raw.githubusercontent.com/ALI11-2000/Open-MPW-Framework-TLV/main/verilog/dv/makerchip_tb/tb_counter.sv'])
    '])                            
    
-   module counter_option1 #(
+   module counter_option2 #(
        parameter BITS = 32
    )(
    `ifdef USE_POWER_PINS

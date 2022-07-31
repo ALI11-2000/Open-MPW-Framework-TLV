@@ -23,11 +23,11 @@ logic [31:0] L0_la_write_a0;
 logic [31:0] L0_rdata_a0;
 
 // For $ready.
-logic L0_ready_a0;
+logic L0_ready_a0,
+      L0_ready_a1;
 
 // For $rst.
-logic L0_rst_a0,
-      L0_rst_a1;
+logic L0_rst_a0;
 
 // For $valid.
 logic L0_valid_a0;
@@ -45,8 +45,8 @@ generate
    // For $count.
    always_ff @(posedge clk) L0_count_a1[BITS-1:0] <= L0_count_a0[BITS-1:0];
 
-   // For $rst.
-   always_ff @(posedge clk) L0_rst_a1 <= L0_rst_a0;
+   // For $ready.
+   always_ff @(posedge clk) L0_ready_a1 <= L0_ready_a0;
 
 
 

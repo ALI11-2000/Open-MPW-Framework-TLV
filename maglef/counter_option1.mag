@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1659041086
+timestamp 1659273372
 << nwell >>
 rect 1066 116677 178886 117243
 rect 1066 115589 178886 116155
@@ -112,7 +112,7 @@ rect 1066 2437 178886 3003
 << obsli1 >>
 rect 1104 2159 178848 117521
 << obsm1 >>
-rect 1104 1776 178848 117552
+rect 1104 1640 178848 117552
 << metal2 >>
 rect 1582 119200 1638 120000
 rect 3146 119200 3202 120000
@@ -2587,8 +2587,8 @@ port 609 nsew signal input
 string FIXED_BBOX 0 0 180000 120000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 7451090
-string GDS_FILE /home/ali11-2000/efabless/Open-MPW-Framework-TLV/openlane/counter_option1/runs/22_07_29_01_42/results/signoff/counter_option1.magic.gds
-string GDS_START 437820
+string GDS_END 7832070
+string GDS_FILE /home/ali11-2000/efabless/Open-MPW-Framework-TLV/openlane/counter_option1/runs/22_07_31_18_11/results/signoff/counter_option1.magic.gds
+string GDS_START 424384
 << end >>
 
